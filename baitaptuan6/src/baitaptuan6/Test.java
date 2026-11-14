@@ -15,16 +15,16 @@ public class Test {
 				System.out.println("NHẬP CUỐN SÁCH THỨ "+i);
 				Sach s = new Sach();
 				System.out.println("Nhập mã sách:");
-				s.masach = sc.nextLine();
+				s.setMasach(sc.nextLine());
 				System.out.println("Nhập tiêu đề:");
-				s.tieude = sc.nextLine();
+				s.setTieude(sc.nextLine()); 
 				System.out.println("Nhập tác giả :");
-				s.tacgia = sc.nextLine();
+				s.setTacgia(sc.nextLine()); 
 				System.out.println("Nhập năm xuất bản:");
-				s.namsanxuat = sc.nextInt();
+				s.setNamsanxuat(sc.nextInt()); 
 				sc.nextLine();
 				System.out.println("Nhập số lượng:");
-				s.soluong = sc.nextInt();
+				s.setSoluong(sc.nextInt());
 				sc.nextLine();
 				
 				danhsach.add(s);
