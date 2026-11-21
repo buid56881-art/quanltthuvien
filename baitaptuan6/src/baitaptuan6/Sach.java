@@ -1,70 +1,59 @@
 package baitaptuan6;
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Sach {
-		private  String masach;
-		private  String tieude;
-		private  String tacgia;
-		private  int namsanxuat;
-		private  int soluong;
+		protected   String masach;
+		protected  String ngaysanxuat;
+		protected  String nhaxuatban;
+		protected  Double dongia;
+		protected  int soluong;
 public Sach () {}
-public Sach (String masach, String tieude,String tacgia,int namsanxuat,int soluong) {
-	this.masach=masach;
-	this.tieude=tieude;
-	this.tacgia=tacgia;
-	this.namsanxuat=namsanxuat;
-	this.soluong=soluong;
+
 	
+	public Sach(String masach, String ngaysanxuat, String nhaxuatban, Double dongia, int soluong) {
+
+	this.masach = masach;
+	this.ngaysanxuat = ngaysanxuat;
+	this.nhaxuatban = nhaxuatban;
+	this.dongia = dongia;
+	this.soluong = soluong;
 }
+
+
 	
-	public String getMasach() {
-		return masach;
-	}
-	public void setMasach(String masach) {
-		this.masach = masach;
-	}
-	public String getTieude() {
-		return tieude;
-	}
-	public void setTieude(String tieude) {
-		this.tieude = tieude;
-	}
-	public String getTacgia() {
-		return tacgia;
-	}
-	public void setTacgia(String tacgia) {
-		this.tacgia = tacgia;
-	}
-	public int getNamsanxuat() {
-		return namsanxuat;
-	}
-	public void setNamsanxuat(int namsanxuat) {
-		if (namsanxuat>0 && namsanxuat<=2026 )
-			this.namsanxuat = namsanxuat;
-		else 
-			System.out.println("nhập lại năm sản xuất");
-	}
-	public int getSoluong() {
-		return soluong;
-	}
+	
 	public void setSoluong(int soluong) {
-		if(soluong>=0)
-			this.soluong = soluong;
-		else
-			System.out.println("nhập lại số lượng");
-		
+		this.soluong = soluong;
 	}
-	
+
+
 	public void hienthithongtin() {
-		System.out.println("mã sách là:"+ masach);
-		System.out.println("tiêu đề là:"+ tieude);
-		System.out.println("tác giả là:"+ tacgia);		
-		System.out.println("năm sản xuất là:"+ namsanxuat);
-		System.out.println("sốlượng là:"+ soluong);
+		System.out.println("mã sách :"+ masach);
+		System.out.println(" ngày sản xuất:"+ ngaysanxuat);
+		System.out.println("nhà xuất bản:"+ nhaxuatban);		
+		System.out.println("đơn giá :"+ dongia);
+		System.out.println("sốlượng :"+ soluong);
 			
 			
 		}
 		
+	public void nhap() {
+	Scanner sc= new Scanner (System.in);
+		System.out.println("Nhập mã sách:");
+		masach=(sc.nextLine());
+		System.out.println("Nhập ngày sản xuất:");
+		ngaysanxuat=(sc.nextLine()); 
+		System.out.println("Nhập nhà xuất bản  :");
+		nhaxuatban=(sc.nextLine()); 
+		System.out.println(" Nhập đơn giá bán:");
+		dongia=(sc.nextDouble()); 
+		sc.nextLine();
+		System.out.println("Nhập số lượng:");
+		soluong=(sc.nextInt());
+		sc.nextLine();
 		
+	}
+	
 		
 	
 
